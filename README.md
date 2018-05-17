@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+YelpCamp Introduction
 
-You can use the [editor on GitHub](https://github.com/sushruth91/Camp-Grounds/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+YelpCamp is a web-application showcasing beautiful camping locations all around the world.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Objective
 
-### Markdown
+The objectives behind this project:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Implement 7 Standard RESTful routes
+Use of MEAN stack
+Implement MVC (model-view-control) design pattern
+Implement functionalities of various node.js packages
+Deployment of the app on HEROKU
+Functionalities & Features
 
-```markdown
-Syntax highlighted code block
+User Authentication
+Session Handling
+Add/Delete/Modify New Campgrounds
+Add/Delete/Modify New Comments
+Requirements
 
-# Header 1
-## Header 2
-### Header 3
+This app requires following requirements installed on your machine.
 
-- Bulleted
-- List
+Node js
+Mongo DB
+Nodemon
+Tip: Install all of the above globally on your machine
+How to run this?
 
-1. Numbered
-2. List
+Open new bash terminal/cmd prompt and start the mongo daemon by typing 'mongod'
+Now open another new bash terminal/cmd prompt, go to location where you saved this project and start the server by typing 'nodemon app.js' or 'node app.js'
+Open any web browser and type 'localhost:3000' as the url
+How to close this?
 
-**Bold** and _Italic_ and `Code` text
+close the web browser
+close the node server by pressing "Ctrl" and "c" together (Ctrl+c)
+close the mongo daemon by pressing "Ctrl" and "c" together (Ctrl+c)
+Upcoming Progress/Updates:
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sushruth91/Camp-Grounds/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The app will be soon deployed on HEROKU and then i wll provide the url for that
+Refactoring and Styling of Sign Up Pages
+New Google Map location functonality for each campground
+Admin Role
+Fuzzy Search
+Password Reset
