@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+<!-- first container is for whole body -->
+<div class="container">
+	<header class="jumbotron">
+		<!--second container is for content inside jumbotron  -->
+		<div class="container">
+			<h1>Welcome to YelpCamp</h1>
+			<p>View our hand-picked campgrounds all over the world</p>
+			<!-- redirects to "new.ejs" -->
+			<p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add new Campground</a></p>
+		</div>
+	</header> 
+
+<!-- making a GRID, text-cnter makes the caption part in center, style class adjusts the varying width of images for grid and doesn't break the grid, although size of images remain different  -->
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+		<!-- loop for displaying contents of campground array with HTML tags -->
+		<% campgrounds.forEach(function(campground){ %> 
+		<!-- making grid responsive when it is minimized -->
+		   <div class="col-md-3 col-sm-6 col-xs-6">
+		   		<div class="thumbnail">
+		   			<!-- this campground is just the placeholder for forEach function -->
+		   			<img src="<%=campground.image%>">
+		   			<!-- giving effect of caption to image --> 
+		   			<div class="caption">
+		   				<!-- this campground is just the placeholder for forEach function -->
+		   				 <h4> <%=campground.name%> </h4>
+		   			</div>
+		   			<p>
+		   				<!-- When we create campground schema, there is no id (just name, image, description....). When we save a campground to database, MongoDB assigns an _id . To quickly find a campground, it is better to search by this unique identifier. Thus, campground._id
+
+						The ids without the underscore are the parameters in the address bar.  "http://campgrounds/:id/comments/:comment_id" these parameters will be passed back and forth as "id" and "comment_id".
+
+						This is how I memorized for myself: Whatever comes from the database, is with "_id".  Whatever comes from the address bar, is req.params.id and req.params.comment_id -->
+						
+		   				<a class="btn btn-primary" href="/campgrounds/<%= campground._id %>">More Info</a>
+		   			</p>
+		   		</div>
+		   </div>
+		<% }); %> 
+	</div>
+</div>
+<% include ../partials/footer %>

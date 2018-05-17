@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="container">
+	<div class="row">
+		<h1 style="text-align: center;">Add a new comment to <%= campground.name%></h1>
+		<div style="width: 30%; margin: 25px auto;">	
+			<form action="/campgrounds/<%= campground._id%>/comments" method="POST">
+				<!-- form-group makes spacing for single element inside it. Every element has to placed inside a separate div -->
+				<div class="form-group">
+					<!-- form-control stretches the input to cover entire width of the form -->
+					<input class="form-control" type="text" placeholder="text" name="comment[text]">
+				</div>
+				<div class="form-group">
+				<!-- btn-block makes the button take the entire width of the block it is placed in -->
+				<button class="btn btn-primary btn-lg btn-block">Submit!</button>
+				</div>
+			</form>
+			<a href="/campgrounds">Go Back</a>
+		</div>
+	</div>	
+</div>
+
+<% include ../partials/footer %>
